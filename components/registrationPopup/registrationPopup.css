@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*Фон модального окна*/
+.registration-container-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*Модальное окно*/
+.registration-container {
+    height: 650px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    top: 25px;
+    left: 0;
+    z-index: 4;
+    border-radius: 5%;
+    background-color: rgba(201, 181, 160);
+}
+
+.registration-content {
+    margin-left: 85px;
+}
+
+.registration-header {
+    margin-bottom: 25px;
+}
+
+.registration-header h1 {
+    color: rgba(0, 0, 0, 0.88);
+    user-select: none;
+    font-weight: 400;
+}
+
+.registration-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.registration-fields label,
+.registration-fields b {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.88);
+    margin-bottom: 5px;
+}
+
+.registration-fields input {
+    width: 80%;
+    height: 40px;
+    padding: 0 10px 0 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.registration-fields input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    text-indent: 6px;
+}
+
+.registration-fields input:focus {
+    outline: none;
+    text-indent: 6px;
+}
+
+.registration-btn-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-btn-section button {
+    width: 260px;
+    height: 45px;
+    padding: 10px 45px 10px 45px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    color: rgba(0, 0, 0, 0.61);
+    background-color: #bea56c;
+}
+
+.registration-btn-section button:hover {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+/* МЕДИАЗАПРОСЫ*/
+/* DESKTOP (1200px и выше) */
+@media screen and (min-width: 1200px) {
+    .registration-container {
+        width: 500px;
+        height: 650px;
+        border-radius: 5%;
+    }
+
+    .registration-content {
+        margin-left: 85px;
+    }
+
+    .registration-header h1 {
+        font-size: 28px;
+    }
+
+    .registration-fields label,
+    .registration-fields b {
+        font-size: 18px;
+    }
+
+    .registration-fields input {
+        font-size: 16px;
+    }
+
+    .registration-btn-section button {
+        font-size: 15px;
+    }
+}
+
+/* LAPTOP (992px – 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .registration-container {
+        width: 450px;
+        height: 600px;
+        border-radius: 10px;
+    }
+
+    .registration-content {
+        margin-left: 70px;
+    }
+
+    .registration-header h1 {
+        font-size: 25px;
+    }
+
+    .registration-fields label,
+    .registration-fields b {
+        font-size: 16px;
+    }
+
+    .registration-fields input {
+        font-size: 14px;
+    }
+
+    .registration-btn-section button {
+        font-size: 14px;
+    }
+}
+
+/* TABLET (768px – 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .registration-container {
+        width: 400px;
+        height: 550px;
+        border-radius: 10px;
+    }
+
+    .registration-content {
+        margin-left: 50px;
+    }
+
+    .registration-header h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .registration-fields label,
+    .registration-fields b {
+        font-size: 14px;
+    }
+
+    .registration-fields input {
+        font-size: 12px;
+    }
+
+    .registration-btn-section button {
+        width: 230px;
+        font-size: 13px;
+    }
+}
+
+/* MOBILE (480px – 767px) */
+@media screen and (max-width: 767px) {
+    .registration-container {
+        width: 90%;
+        height: auto;
+        top: 10px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .registration-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .registration-header h1 {
+        font-size: 20px;
+    }
+
+    .registration-fields label,
+    .registration-fields b {
+        font-size: 12px;
+    }
+
+    .registration-fields input {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .registration-btn-section button {
+        width: 200px;
+        font-size: 12px;
+    }
+}
+
+/* SMALL MOBILE (до 480px) */
+@media screen and (max-width: 480px) {
+    .registration-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        top: 0;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .registration-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .registration-header h1 {
+        font-size: 18px;
+    }
+
+    .registration-fields label,
+    .registration-fields b {
+        font-size: 10px;
+    }
+
+    .registration-fields input {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .registration-btn-section button {
+        width: 100%;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,438 @@
+/*Слайдер*/
+.main-banner-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main-banner-slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 1.5s ease-in-out;
+}
+
+.main-banner-slide {
+    flex: 0 0 33.3333%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-banner-title {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main-banner-title h2 {
+    color: #e4decb;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.main-banner-section {
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-banner-section h3 {
+    color: #e1e1df;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    user-select: none;
+}
+
+.main-banner-section button {
+    padding: 0.8125rem 5rem;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid #c9c9c9;
+    color: #ffffff;
+    line-height: 1.25rem;
+    cursor: pointer;
+}
+
+.main-banner-section button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*Область между видео*/
+.title-collection {
+    margin: 120px 0;
+    color: rgba(67, 61, 49, 0.7);
+}
+
+.title-collection h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.title-collection b {
+    font-weight: 600;
+}
+
+/*Фото*/
+.fullScreen {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullScreenBody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.49);
+    /*border: 1px solid rgba(67, 61, 49, 0.7);*/
+}
+
+.fullScreenTitleAllPicture p {
+    letter-spacing: 8px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    user-select: none;
+}
+
+/*Цвет каждого заголовка*/
+#colorOrange {
+    color: #db4b1a;
+}
+
+#colorPurple {
+    color: #efa7aa;
+}
+
+#colorGreen {
+    color: #6cd14b;
+}
+
+.fullScreenLink a {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin: 10px 30px 10px 30px;
+}
+
+.fullScreenLink a:hover {
+    color: rgb(152, 166, 180);
+}
+
+/*Стили карточек товара*/
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 120px 0 120px;
+}
+
+.product-card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.product-card-section img {
+    width: 303.8px;
+    height: 379.75px;
+    border: 2px solid #f3f3f3;
+}
+
+.product-card-text {
+    text-align: left;
+}
+
+.product-card-text p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000000;
+
+}
+
+.product-card-text b {
+    font-weight: 500;
+}
+
+.product-card-section a:hover {
+    text-decoration: underline;
+    color: #000000;
+    text-underline-offset: 5px;
+}
+
+/* ОБЩИЕ МЕДИАЗАПРОСЫ */
+/* ДЛЯ DESKTOP (экран от 1200px и выше) */
+@media screen and (min-width: 1200px) {
+    .fullScreenTitleAllPicture {
+        font-size: 45px;
+    }
+
+    .main-banner-title {
+        width: 700px;
+    }
+
+    .fullScreenLink a {
+        font-size: 30px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 30px;
+    }
+
+    .main-banner-section button {
+        font-size: 14px;
+    }
+}
+
+/* ДЛЯ LAPTOP (от 992px до 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .fullScreen {
+        min-height: 0;
+    }
+
+    .main-banner-title {
+        width: 550px;
+    }
+
+    .fullScreenTitleAllPicture {
+        font-size: 28px;
+    }
+
+    .fullScreenLink a {
+        font-size: 25px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 25px;
+    }
+
+    .main-banner-section button {
+        font-size: 14px;
+        padding: 0.75rem 4.5rem;
+    }
+
+    .product-card-section {
+        margin-bottom: 40px;
+    }
+}
+
+/* ДЛЯ TABLET (от 768px до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .fullScreen {
+        min-height: 0;
+    }
+
+    .main-banner-title {
+        width: 500px;
+    }
+
+    .fullScreenTitleAllPicture p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .fullScreenLink a {
+        font-size: 18px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 22px;
+    }
+
+    .main-banner-section button {
+        font-size: 14px;
+        padding: 0.65rem 4rem;
+    }
+
+    .title-collection h4 {
+        font-size: 28px;
+    }
+
+    .product-card-section {
+        margin-bottom: 40px;
+    }
+}
+
+/* ДЛЯ MOBILE (от 480px до 767px) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .fullScreen {
+        min-height: 0;
+    }
+
+    .main-banner-title {
+        width: 370px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 16px;
+    }
+
+    .product-card {
+        margin: 50px 30px;
+    }
+
+    .fullScreenTitleAllPicture {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .fullScreenTitleAllPicture p {
+        margin: 0;
+        letter-spacing: 4px;
+    }
+
+    .fullScreenLink a {
+        font-size: 14px;
+        margin: 0;
+        /*padding: 8px 20px;*/
+    }
+
+    .main-banner-section button {
+        font-size: 12px;
+        padding: 0.5rem 2rem;
+    }
+
+    .title-collection h4 {
+        font-size: 24px;
+    }
+
+    .product-card-section {
+        margin-bottom: 30px;
+    }
+}
+
+/* ДЛЯ SMALL MOBILE (до 479px) */
+@media screen and (max-width: 479px) {
+    .main-banner-title {
+        width: 300px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 1px;
+    }
+
+    .fullScreen {
+        min-height: 0;
+    }
+
+    .product-card {
+        margin: 50px 30px;
+    }
+
+    .product-card-text p {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .fullScreenTitleAllPicture {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .fullScreenTitleAllPicture p {
+        margin: 0;
+        letter-spacing: 4px;
+    }
+
+    .fullScreenLink a {
+        font-size: 12px;
+        margin: 0;
+        /*padding: 8px 20px;*/
+    }
+
+    .main-banner-title h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .main-banner-section {
+        width: 195px;
+    }
+
+    .main-banner-section h3 {
+        font-size: 16px;
+    }
+
+    .main-banner-section button {
+        font-size: 12px;
+        padding: 0.5rem 2.5rem;
+    }
+
+    .title-collection h4 {
+        font-size: 20px;
+    }
+
+    .product-card-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* ДЛЯ VERY SMALL MOBILE (до 320px) */
+@media screen and (max-width: 320px) {
+    .fullScreen {
+        min-height: 0;
+    }
+
+    .product-card {
+        margin: 50px 0;
+    }
+
+    .product-card-text p {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .fullScreenTitleAllPicture p {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    .fullScreenLink a {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+
+    .main-banner-title h2 {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .main-banner-section {
+        width: 170px;
+    }
+
+    .main-banner-section h3 {
+        font-size: 14px;
+    }
+
+    .main-banner-section button {
+        font-size: 10px;
+        padding: 0.4rem 2.3rem;
+    }
+
+    .title-collection h4 {
+        font-size: 18px;
+    }
+}

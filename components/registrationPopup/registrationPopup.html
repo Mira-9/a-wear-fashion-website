@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/favicon/favicon_A-WEAR.png"/>
+
+    <link rel="stylesheet" href="registrationPopup.css">
+    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+
+    <title>A-WEAR | Создание учетной записи</title>
+</head>
+<body>
+<main>
+    <div class="registration-container-overlay" id="registrationFormOverlay" style="display: none;">
+        <form>
+            <div class="registration-container">
+                <div class="registration-content">
+                    <div class="registration-header">
+                        <h1>Регистрация</h1>
+                    </div>
+                    <div class="registration-fields">
+                        <label for="first-name"><b>Имя*</b></label>
+                        <input type="text" id="first-name" placeholder="Введите имя" required>
+
+                        <label for="surname"><b>Фамилия</b></label>
+                        <input type="text" id="surname" placeholder="Введите фамилию 'необязательно'">
+
+                        <label for="email"><b>Email*</b></label>
+                        <input type="email" id="email" placeholder="Введите email" required>
+
+                        <label for="password"><b>Пароль*</b></label>
+                        <input type="password" id="password" placeholder="Введите пароль" required>
+                    </div>
+                    <div class="registration-btn-section">
+                        <button class="registration-btn-submit" type="submit">Получить A-Wear ID</button>
+                        <div class="registration-btn-reset">
+                            <button class="close-button" type="reset">Отмена</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

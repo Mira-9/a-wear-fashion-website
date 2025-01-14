@@ -1,0 +1,8 @@
+#файл webStorm
+.idea
+
+#файлы для правок
+catalogPage
+sidebarMenu
+sidebarMenu.js
+modalWindow.js
